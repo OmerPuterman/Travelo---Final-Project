@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="travelo_primary">#FF007AFF</color>
+    <color name="travelo_primary_container">#FFD6E9FF</color>
+    <color name="travelo_on_primary_container">#FF00386B</color>
+
+    <color name="travelo_secondary">#FF34C759</color>
+    <color name="travelo_secondary_container">#FFD9F7E0</color>
+    <color name="travelo_on_secondary_container">#FF0B3D17</color>
+
+    <color name="travelo_tertiary">#FFFF9500</color>
+    <color name="travelo_tertiary_container">#FFFFE6C2</color>
+    <color name="travelo_on_tertiary_container">#FF5C3600</color>
+
+    <color name="travelo_error">#FFFF3B30</color>
+
+    <color name="travelo_background">#FFF2F2F7</color>
+    <color name="travelo_surface">#FFFFFFFF</color>
+    <color name="travelo_surface_variant">#FFF2F2F7</color>
+    <color name="travelo_outline">#FFC7C7CC</color>
+    <color name="travelo_on_surface">#FF1C1C1E</color>
+    <color name="travelo_on_surface_variant">#FF8E8E93</color>
+</resources>

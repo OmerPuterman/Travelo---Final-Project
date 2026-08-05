@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1087624863330",
+    "firebase_url": "https://travelo-76de9-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "travelo-76de9",
+    "storage_bucket": "travelo-76de9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087624863330:android:288e4897855e7c6cc13b3b",
+        "android_client_info": {
+          "package_name": "com.example.travelo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087624863330-ol582obheafkjhdtu1l99hb44bei740j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMCckuoLFPrwRE6wxE24zJ9oxW2XbG7V4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1087624863330-ol582obheafkjhdtu1l99hb44bei740j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

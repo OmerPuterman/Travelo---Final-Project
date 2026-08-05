@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.travelo.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action android:id="@+id/action_login_to_guideDashboard" app:destination="@id/guideDashboardFragment" app:popUpTo="@id/loginFragment" app:popUpToInclusive="true" />
+        <action android:id="@+id/action_login_to_businessDashboard" app:destination="@id/businessDashboardFragment" app:popUpTo="@id/loginFragment" app:popUpToInclusive="true" />
+        <action android:id="@+id/action_login_to_travelerDashboard" app:destination="@id/travelerDashboardFragment" app:popUpTo="@id/loginFragment" app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guideDashboardFragment"
+        android:name="com.example.travelo.ui.dashboard.GuideDashboardFragment"
+        android:label="Guide Dashboard">
+        <action android:id="@+id/action_guideDashboard_to_createTrip" app:destination="@id/createTripFragment" />
+        <action android:id="@+id/action_guideDashboard_to_routeSelection" app:destination="@id/routeSelectionFragment" />
+        <action android:id="@+id/action_guideDashboard_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/guideDashboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/businessDashboardFragment"
+        android:name="com.example.travelo.ui.dashboard.BusinessDashboardFragment"
+        android:label="Business Dashboard">
+        <action android:id="@+id/action_businessDashboard_to_addOffer" app:destination="@id/addOfferFragment" />
+        <action android:id="@+id/action_businessDashboard_to_login" app:destination="@id/loginFragment" app:popUpTo="@id/businessDashboardFragment" app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/travelerDashboardFragment"
+        android:name="com.example.travelo.ui.dashboard.TravelerDashboardFragment"
+        android:label="Traveler Dashboard">
+        <action android:id="@+id/action_travelerDashboard_to_itinerary" app:destination="@id/travelerItineraryFragment" />
+        <action android:id="@+id/action_travelerDashboard_to_login" app:destination="@id/loginFragment" app:popUpTo="@id/travelerDashboardFragment" app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createTripFragment"
+        android:name="com.example.travelo.ui.trip.CreateTripFragment"
+        android:label="Create Trip" />
+
+    <fragment
+        android:id="@+id/addOfferFragment"
+        android:name="com.example.travelo.ui.offer.AddOfferFragment"
+        android:label="Add Offer" />
+
+    <fragment
+        android:id="@+id/routeSelectionFragment"
+        android:name="com.example.travelo.ui.route.RouteSelectionFragment"
+        android:label="Select Places">
+        <argument android:name="tripId" app:argType="string" android:defaultValue="GLOBAL_MARKETPLACE" />
+        <action android:id="@+id/action_routeSelection_to_tripDetails"
+            app:destination="@id/tripDetailsFragment"
+            app:popUpTo="@id/routeSelectionFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tripDetailsFragment"
+        android:name="com.example.travelo.ui.trip.TripDetailsFragment"
+        android:label="Final Itinerary">
+        <argument android:name="tripId" app:argType="string" android:defaultValue="0" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/travelerItineraryFragment"
+        android:name="com.example.travelo.ui.itinerary.TravelerItineraryFragment"
+        android:label="Your Itinerary">
+        <argument android:name="tripId" app:argType="string" android:defaultValue="0" />
+    </fragment>
+
+</navigation>

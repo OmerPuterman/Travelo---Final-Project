@@ -1,0 +1,24 @@
+# --- Critical: never commit these, regardless of where they end up ---
+**/serviceAccountKey.json
+**/local.properties
+
+# --- Android ---
+android-app/.gradle/
+android-app/build/
+android-app/app/build/
+android-app/.idea/
+android-app/.kotlin/
+android-app/*.iml
+android-app/captures/
+android-app/local.properties
+
+# --- Backend (Maven / Eclipse) ---
+backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/bin/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
