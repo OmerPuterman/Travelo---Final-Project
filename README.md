@@ -231,8 +231,5 @@ Every proposal is geohashed once, when it's published. `RouteService` computes t
 
 ## Known Limitations
 
-Documented honestly rather than hidden:
-
-1. **Weight preferences aren't wired into the optimizer yet.** `RouteService.generateRoute()` currently calls the optimizer with hardcoded weights (`0.001, 0.1, 0.5, 2.0`) instead of reading the trip's Guide's saved `User.weightDistance / weightTime / weightCost / weightProfit`. The preferences are collected and persisted correctly from the app (see [Key Code — Algorithm Weight Controls](#key-code--algorithm-weight-controls)), but the backend doesn't read them back yet — that's the natural next step.
-2. **The geohash pre-filter can silently exclude selected offers.** If a trip's start/end coordinates don't comfortably cover an offer a Guide explicitly checked in Route Selection, that offer gets dropped before the optimizer even sees it. If every selected offer gets filtered out this way, the app surfaces `"Optimization failed. Check constraints."`
-3. **Trip confirmation is local-only.** The Traveler's "Confirm Trip" button persists on-device via `SharedPreferences`, scoped per Firebase user — there's no `travelerIds`-type field on `Trip`/`User` yet, so confirmation doesn't sync across a Traveler's devices.
+1. **The geohash pre-filter can silently exclude selected offers.** If a trip's start/end coordinates don't comfortably cover an offer a Guide explicitly checked in Route Selection, that offer gets dropped before the optimizer even sees it. If every selected offer gets filtered out this way, the app surfaces `"Optimization failed. Check constraints."`
+2. **Trip confirmation is local-only.** The Traveler's "Confirm Trip" button persists on-device via `SharedPreferences`, scoped per Firebase user — there's no `travelerIds`-type field on `Trip`/`User` yet, so confirmation doesn't sync across a Traveler's devices.
